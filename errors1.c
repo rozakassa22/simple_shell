@@ -118,7 +118,7 @@ char *convert_number(long int num, int base, int flags)
 
 	if (sign)
 		*--ptr = sign;
-	return (ptr);
+[O	return (ptr);
 }
 
 /**
@@ -138,4 +138,3 @@ void remove_comments(char *buf)
 			break;
 		}
 }
-

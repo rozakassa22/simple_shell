@@ -110,7 +110,7 @@ list_t *node_starts_with(list_t *node, char *prefix, char c)
 ssize_t get_node_index(list_t *head, list_t *node)
 {
 	size_t i = 0;
-
+[O
 	while (head)
 	{
 		if (head == node)
@@ -120,4 +120,3 @@ ssize_t get_node_index(list_t *head, list_t *node)
 	}
 	return (-1);
 }
-

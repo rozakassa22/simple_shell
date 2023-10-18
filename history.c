@@ -99,7 +99,7 @@ int read_history(info_t *info)
 	while (info->histcount-- >= HIST_MAX)
 		delete_node_at_index(&(info->history), 0);
 	renumber_history(info);
-	return (info->histcount);
+[O	return (info->histcount);
 }
 
 /**
@@ -128,7 +128,7 @@ int build_history_list(info_t *info, char *buf, int linecount)
  * @info: Structure containing potential arguments. Used to maintain
  *
  * Return: the new histcount
-[O */
+ */
 int renumber_history(info_t *info)
 {
 	list_t *node = info->history;
@@ -141,4 +141,3 @@ int renumber_history(info_t *info)
 	}
 	return (info->histcount = i);
 }
-
