@@ -59,7 +59,7 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
  * assign_lineptr - Reassigns the lineptr variable for _getline.
  * @lineptr: A buffer to store an input string.
  * @n: The size of lineptr.
-[O * @buffer: The string to assign to lineptr.
+ * @buffer: The string to assign to lineptr.
  * @b: The size of buffer.
  */
 void assign_lineptr(char **lineptr, size_t *n, char *buffer, size_t b)

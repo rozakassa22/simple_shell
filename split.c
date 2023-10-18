@@ -1,8 +1,8 @@
 #include "shell.h"
 
-char **_strtok(char *line, char *delim);
 int token_len(char *str, char *delim);
 int count_tokens(char *str, char *delim);
+char **_strtok(char *line, char *delim);
 
 /**
  * token_len - Locates the delimiter index marking the end
@@ -13,7 +13,6 @@ int count_tokens(char *str, char *delim);
  * Return: The delimiter index marking the end of
  *         the intitial token pointed to be str.
  */
-
 int token_len(char *str, char *delim)
 {
 	int index = 0, len = 0;

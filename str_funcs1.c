@@ -1,9 +1,9 @@
 #include "shell.h"
 
-char *_strcat(char *dest, const char *src);
-char *_strncat(char *dest, const char *src, size_t n);
 int _strlen(const char *s);
 char *_strcpy(char *dest, const char *src);
+char *_strcat(char *dest, const char *src);
+char *_strncat(char *dest, const char *src, size_t n);
 
 /**
  * _strlen - Returns the length of a string.
@@ -13,13 +13,13 @@ char *_strcpy(char *dest, const char *src);
  */
 int _strlen(const char *s)
 {
-	int lengthh = 0;
+	int length = 0;
 
 	if (!s)
-		return (lengthh);
-	for (lengthh = 0; s[lengthh]; lengthh++)
+		return (length);
+	for (length = 0; s[length]; length++)
 		;
-	return (lengthh);
+	return (length);
 }
 
 /**
@@ -32,11 +32,11 @@ int _strlen(const char *s)
  */
 char *_strcpy(char *dest, const char *src)
 {
-	size_t index;
+	size_t i;
 
-	for (index = 0; src[index] != '\0'; index++)
-		dest[index] = src[index];
-	dest[index] = '\0';
+	for (i = 0; src[i] != '\0'; i++)
+		dest[i] = src[i];
+	dest[i] = '\0';
 	return (dest);
 }
 
@@ -50,16 +50,16 @@ char *_strcpy(char *dest, const char *src)
 char *_strcat(char *dest, const char *src)
 {
 	char *destTemp;
-	const char *srcTempp;
+	const char *srcTemp;
 
 	destTemp = dest;
-	srcTempp =  src;
+	srcTemp =  src;
 
 	while (*destTemp != '\0')
 		destTemp++;
 
-	while (*srcTempp != '\0')
-		*destTemp++ = *srcTempp++;
+	while (*srcTemp != '\0')
+		*destTemp++ = *srcTemp++;
 	*destTemp = '\0';
 	return (dest);
 }
@@ -76,11 +76,11 @@ char *_strcat(char *dest, const char *src)
 char *_strncat(char *dest, const char *src, size_t n)
 {
 	size_t dest_len = _strlen(dest);
-	size_t index;
+	size_t i;
 
-	for (index = 0; index < n && src[index] != '\0'; index++)
-		dest[dest_len + index] = src[index];
-	dest[dest_len + index] = '\0';
+	for (i = 0; i < n && src[i] != '\0'; i++)
+		dest[dest_len + i] = src[i];
+	dest[dest_len + i] = '\0';
 
 	return (dest);
 }

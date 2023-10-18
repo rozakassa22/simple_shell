@@ -1,9 +1,9 @@
 #include "shell.h"
 
-int _strcmp(char *s1, char *s2);
-int _strncmp(const char *s1, const char *s2, size_t n);
 char *_strchr(char *s, char c);
 int _strspn(char *s, char *accept);
+int _strcmp(char *s1, char *s2);
+int _strncmp(const char *s1, const char *s2, size_t n);
 
 /**
  * _strchr - Locates a character in a string.
@@ -13,15 +13,14 @@ int _strspn(char *s, char *accept);
  * Return: If c is found - a pointer to the first occurence.
  *         If c is not found - NULL.
  */
-
 char *_strchr(char *s, char c)
 {
-	int i;
+	int index;
 
-	for (i = 0; s[i]; i++)
+	for (index = 0; s[index]; index++)
 	{
-		if (s[i] == c)
-			return (s + i);
+		if (s[index] == c)
+			return (s + index);
 	}
 
 	return (NULL);
@@ -38,13 +37,13 @@ char *_strchr(char *s, char c)
 int _strspn(char *s, char *accept)
 {
 	int bytes = 0;
-	int indexx;
+	int index;
 
 	while (*s)
 	{
-		for (indexx = 0; accept[indexx]; indexx++)
+		for (index = 0; accept[index]; index++)
 		{
-			if (*s == accept[indexx])
+			if (*s == accept[index])
 			{
 				bytes++;
 				break;
@@ -90,16 +89,16 @@ int _strcmp(char *s1, char *s2)
  */
 int _strncmp(const char *s1, const char *s2, size_t n)
 {
-	size_t index;
+	size_t i;
 
-	for (index = 0; s1[index] && s2[index] && index < n; index++)
+	for (i = 0; s1[i] && s2[i] && i < n; i++)
 	{
-		if (s1[index] > s2[index])
-			return (s1[index] - s2[index]);
-		else if (s1[index] < s2[index])
-			return (s1[index] - s2[index]);
+		if (s1[i] > s2[i])
+			return (s1[i] - s2[i]);
+		else if (s1[i] < s2[i])
+			return (s1[i] - s2[i]);
 	}
-	if (index == n)
+	if (i == n)
 		return (0);
 	else
 		return (-15);
