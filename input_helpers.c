@@ -113,7 +113,7 @@ int run_args(char **args, char **front, int *exe_ret)
 	int (*builtin)(char **args, char **front);
 
 	builtin = get_builtin(args[0]);
-[O
+
 	if (builtin)
 	{
 		ret = builtin(args + 1, front);

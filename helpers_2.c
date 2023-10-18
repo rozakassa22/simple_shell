@@ -102,7 +102,7 @@ void handle_line(char **line, ssize_t read)
  *
  * Return: The new length of the line.
  *
-[O * Description: Cuts short lines containing '#' comments with '\0'.
+ * Description: Cuts short lines containing '#' comments with '\0'.
  */
 
 ssize_t get_new_len(char *line)
